@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59B7367A24FFA1D100330CD4 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7367924FFA1D100330CD4 /* MainInteractor.swift */; };
+		59B7367C24FFA1DB00330CD4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7367B24FFA1DB00330CD4 /* MainPresenter.swift */; };
+		59B7367E24FFA1F200330CD4 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7367D24FFA1F200330CD4 /* QuizModel.swift */; };
+		59B7368024FFA20300330CD4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7367F24FFA20300330CD4 /* MainRouter.swift */; };
+		59B7368324FFA85400330CD4 /* HTMLdecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7368224FFA85400330CD4 /* HTMLdecode.swift */; };
+		59DFA1E824FDEB8B0084D508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA1E724FDEB8B0084D508 /* AppDelegate.swift */; };
+		59DFA1EA24FDEB8B0084D508 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA1E924FDEB8B0084D508 /* SceneDelegate.swift */; };
+		59DFA1EF24FDEB8B0084D508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DFA1ED24FDEB8B0084D508 /* Main.storyboard */; };
+		59DFA1F124FDEB8E0084D508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59DFA1F024FDEB8E0084D508 /* Assets.xcassets */; };
+		59DFA1F424FDEB8E0084D508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DFA1F224FDEB8E0084D508 /* LaunchScreen.storyboard */; };
+		59DFA1FE24FF8B950084D508 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA1FD24FF8B950084D508 /* MainVC.swift */; };
+		C7951E6FBF147BEB9DA279EB /* Pods_learn_ios_viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220755155C5D2F97A5782EF6 /* Pods_learn_ios_viper.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		220755155C5D2F97A5782EF6 /* Pods_learn_ios_viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learn_ios_viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C35AE4B7FD400722214560 /* Pods-learn-ios-viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn-ios-viper.debug.xcconfig"; path = "Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper.debug.xcconfig"; sourceTree = "<group>"; };
+		59B7367924FFA1D100330CD4 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		59B7367B24FFA1DB00330CD4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		59B7367D24FFA1F200330CD4 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		59B7367F24FFA20300330CD4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		59B7368224FFA85400330CD4 /* HTMLdecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLdecode.swift; sourceTree = "<group>"; };
+		59DFA1E424FDEB8B0084D508 /* learn-ios-viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-ios-viper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DFA1E724FDEB8B0084D508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59DFA1E924FDEB8B0084D508 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		59DFA1EE24FDEB8B0084D508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59DFA1F024FDEB8E0084D508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59DFA1F324FDEB8E0084D508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59DFA1F524FDEB8E0084D508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DFA1FD24FF8B950084D508 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B43DD1A116629088847BB887 /* Pods-learn-ios-viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn-ios-viper.release.xcconfig"; path = "Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59DFA1E124FDEB8B0084D508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7951E6FBF147BEB9DA279EB /* Pods_learn_ios_viper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59B7368124FFA83200330CD4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				59B7368224FFA85400330CD4 /* HTMLdecode.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		59DFA1DB24FDEB8B0084D508 = {
+			isa = PBXGroup;
+			children = (
+				59DFA1E624FDEB8B0084D508 /* learn-ios-viper */,
+				59DFA1E524FDEB8B0084D508 /* Products */,
+				87C490451452944F394E5BCA /* Pods */,
+				917B550DEA6990B0280C7BA7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59DFA1E524FDEB8B0084D508 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59DFA1E424FDEB8B0084D508 /* learn-ios-viper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59DFA1E624FDEB8B0084D508 /* learn-ios-viper */ = {
+			isa = PBXGroup;
+			children = (
+				59DFA1FF24FF9A640084D508 /* View */,
+				59DFA20024FF9A690084D508 /* Interactor */,
+				59DFA20124FF9A700084D508 /* Presenter */,
+				59DFA20224FF9A750084D508 /* Entity */,
+				59DFA20324FF9A7B0084D508 /* Router */,
+				59B7368124FFA83200330CD4 /* Util */,
+				59DFA1E724FDEB8B0084D508 /* AppDelegate.swift */,
+				59DFA1E924FDEB8B0084D508 /* SceneDelegate.swift */,
+				59DFA1F024FDEB8E0084D508 /* Assets.xcassets */,
+				59DFA1F224FDEB8E0084D508 /* LaunchScreen.storyboard */,
+				59DFA1F524FDEB8E0084D508 /* Info.plist */,
+			);
+			path = "learn-ios-viper";
+			sourceTree = "<group>";
+		};
+		59DFA1FF24FF9A640084D508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59DFA1FD24FF8B950084D508 /* MainVC.swift */,
+				59DFA1ED24FDEB8B0084D508 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59DFA20024FF9A690084D508 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				59B7367924FFA1D100330CD4 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		59DFA20124FF9A700084D508 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				59B7367B24FFA1DB00330CD4 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		59DFA20224FF9A750084D508 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				59B7367D24FFA1F200330CD4 /* QuizModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		59DFA20324FF9A7B0084D508 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				59B7367F24FFA20300330CD4 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		87C490451452944F394E5BCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40C35AE4B7FD400722214560 /* Pods-learn-ios-viper.debug.xcconfig */,
+				B43DD1A116629088847BB887 /* Pods-learn-ios-viper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		917B550DEA6990B0280C7BA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				220755155C5D2F97A5782EF6 /* Pods_learn_ios_viper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59DFA1E324FDEB8B0084D508 /* learn-ios-viper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DFA1F824FDEB8E0084D508 /* Build configuration list for PBXNativeTarget "learn-ios-viper" */;
+			buildPhases = (
+				71C8091E5127415B9E91B6BB /* [CP] Check Pods Manifest.lock */,
+				59DFA1E024FDEB8B0084D508 /* Sources */,
+				59DFA1E124FDEB8B0084D508 /* Frameworks */,
+				59DFA1E224FDEB8B0084D508 /* Resources */,
+				24BB42BCD1D553DB41588544 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "learn-ios-viper";
+			productName = "learn-ios-viper";
+			productReference = 59DFA1E424FDEB8B0084D508 /* learn-ios-viper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59DFA1DC24FDEB8B0084D508 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Muhammad Hilmy Fauzi";
+				TargetAttributes = {
+					59DFA1E324FDEB8B0084D508 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 59DFA1DF24FDEB8B0084D508 /* Build configuration list for PBXProject "learn-ios-viper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59DFA1DB24FDEB8B0084D508;
+			productRefGroup = 59DFA1E524FDEB8B0084D508 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59DFA1E324FDEB8B0084D508 /* learn-ios-viper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59DFA1E224FDEB8B0084D508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DFA1F424FDEB8E0084D508 /* LaunchScreen.storyboard in Resources */,
+				59DFA1F124FDEB8E0084D508 /* Assets.xcassets in Resources */,
+				59DFA1EF24FDEB8B0084D508 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24BB42BCD1D553DB41588544 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71C8091E5127415B9E91B6BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-learn-ios-viper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59DFA1E024FDEB8B0084D508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B7367C24FFA1DB00330CD4 /* MainPresenter.swift in Sources */,
+				59B7368024FFA20300330CD4 /* MainRouter.swift in Sources */,
+				59DFA1E824FDEB8B0084D508 /* AppDelegate.swift in Sources */,
+				59DFA1FE24FF8B950084D508 /* MainVC.swift in Sources */,
+				59B7368324FFA85400330CD4 /* HTMLdecode.swift in Sources */,
+				59DFA1EA24FDEB8B0084D508 /* SceneDelegate.swift in Sources */,
+				59B7367E24FFA1F200330CD4 /* QuizModel.swift in Sources */,
+				59B7367A24FFA1D100330CD4 /* MainInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59DFA1ED24FDEB8B0084D508 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59DFA1EE24FDEB8B0084D508 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59DFA1F224FDEB8E0084D508 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59DFA1F324FDEB8E0084D508 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59DFA1F624FDEB8E0084D508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59DFA1F724FDEB8E0084D508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59DFA1F924FDEB8E0084D508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C35AE4B7FD400722214560 /* Pods-learn-ios-viper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72C5A4RQ56;
+				INFOPLIST_FILE = "learn-ios-viper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzi.learn-ios-viper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59DFA1FA24FDEB8E0084D508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43DD1A116629088847BB887 /* Pods-learn-ios-viper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72C5A4RQ56;
+				INFOPLIST_FILE = "learn-ios-viper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzi.learn-ios-viper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59DFA1DF24FDEB8B0084D508 /* Build configuration list for PBXProject "learn-ios-viper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DFA1F624FDEB8E0084D508 /* Debug */,
+				59DFA1F724FDEB8E0084D508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DFA1F824FDEB8E0084D508 /* Build configuration list for PBXNativeTarget "learn-ios-viper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DFA1F924FDEB8E0084D508 /* Debug */,
+				59DFA1FA24FDEB8E0084D508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59DFA1DC24FDEB8B0084D508 /* Project object */;
+}
