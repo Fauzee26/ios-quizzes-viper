@@ -6,4 +6,20 @@
 //  Copyright © 2020 Muhammad Hilmy Fauzi. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol MainRouterProtocol:class {
+    static func setupProtocolView(mainVC: MainVC)
+}
+
+class MainRouter: MainRouterProtocol {
+    static func setupProtocolView(mainVC: MainVC) {
+        let presenter: MainViewProtocol & MainPresenterProtocol = MainPresenter()
+        
+        mainVC.presenter = presenter
+        mainVC.presenter?.router = MainRouter()
+        mainVC.presenter?.presenterView = mainVC
+        mainVC.presenter?.interactor = MainInteractor()
+        mainVC.presenter?.interactor?.presenter = presenter
+    }
+}

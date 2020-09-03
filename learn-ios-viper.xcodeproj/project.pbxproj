@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -143,7 +143,6 @@
 				40C35AE4B7FD400722214560 /* Pods-learn-ios-viper.debug.xcconfig */,
 				B43DD1A116629088847BB887 /* Pods-learn-ios-viper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -15,17 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iX-ad-rqb">
-                                <rect key="frame" x="20" y="221" width="374" height="473"/>
-                                <string key="text">TF2: Sentry rocket damage falloff is calculated based on the distance between the sentry and the enemy, not the engineer and the enemy</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iX-ad-rqb">
+                                <rect key="frame" x="20" y="226" width="374" height="468"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-X6-xqu">
-                                <rect key="frame" x="168.5" y="52" width="77" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-X6-xqu">
+                                <rect key="frame" x="193" y="72" width="28" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Ii7-uB-vrG"/>
+                                    <constraint firstAttribute="height" constant="40" id="aAe-0j-uzS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -58,24 +57,33 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="X7B-C9-iIJ">
-                                <rect key="frame" x="20" y="180.5" width="374" height="4"/>
+                                <rect key="frame" x="20" y="185.5" width="374" height="4"/>
                                 <color key="tintColor" red="0.08235294118" green="0.32156862749999998" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="cv2-yR-Jc8"/>
                                 </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment: Board Games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-Mt-rd9">
-                                <rect key="frame" x="20" y="147" width="374" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-Mt-rd9">
+                                <rect key="frame" x="20" y="152" width="374" height="33.5"/>
                                 <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Easy  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4v-ad-uNZ">
-                                <rect key="frame" x="183" y="123" width="48" height="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4v-ad-uNZ">
+                                <rect key="frame" x="207" y="128" width="0.0" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="mlP-ew-kmU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MuktaMahee-Light" family="Mukta Mahee" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r20-1U-TuS">
+                                <rect key="frame" x="189" y="52" width="36.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MCg-vu-LKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Light" family="Mukta Mahee" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,18 +95,20 @@
                             <constraint firstItem="9Hx-CT-54R" firstAttribute="leading" secondItem="dN4-uG-L6d" secondAttribute="leading" constant="20" id="BbE-ZW-t2Z"/>
                             <constraint firstItem="dN4-uG-L6d" firstAttribute="bottom" secondItem="RHa-gh-woQ" secondAttribute="bottom" constant="20" id="Edq-S1-0D3"/>
                             <constraint firstItem="RHa-gh-woQ" firstAttribute="leading" secondItem="dN4-uG-L6d" secondAttribute="leading" constant="20" id="EvY-jY-d2s"/>
+                            <constraint firstItem="r20-1U-TuS" firstAttribute="top" secondItem="dN4-uG-L6d" secondAttribute="top" constant="8" id="Hfs-Ej-KrZ"/>
                             <constraint firstItem="2iX-ad-rqb" firstAttribute="top" secondItem="X7B-C9-iIJ" secondAttribute="bottom" constant="36.5" id="LAC-YK-Cp0"/>
                             <constraint firstItem="dN4-uG-L6d" firstAttribute="trailing" secondItem="9Hx-CT-54R" secondAttribute="trailing" constant="20" id="N3A-gf-Fi1"/>
                             <constraint firstItem="A4v-ad-uNZ" firstAttribute="top" secondItem="kmu-X6-xqu" secondAttribute="bottom" constant="16" id="NLX-IY-Qfk"/>
                             <constraint firstItem="X7B-C9-iIJ" firstAttribute="leading" secondItem="dN4-uG-L6d" secondAttribute="leading" constant="20" id="PWr-hV-Oq1"/>
                             <constraint firstItem="X7B-C9-iIJ" firstAttribute="centerX" secondItem="2iX-ad-rqb" secondAttribute="centerX" id="Plf-83-xqg"/>
                             <constraint firstItem="RHa-gh-woQ" firstAttribute="top" secondItem="9Hx-CT-54R" secondAttribute="bottom" constant="8" id="SHj-xs-6Kf"/>
+                            <constraint firstItem="r20-1U-TuS" firstAttribute="centerX" secondItem="OV5-D2-zF1" secondAttribute="centerX" id="U5K-IY-OBf"/>
                             <constraint firstItem="dN4-uG-L6d" firstAttribute="trailing" secondItem="RHa-gh-woQ" secondAttribute="trailing" constant="20" id="VNX-1g-cxU"/>
                             <constraint firstItem="dN4-uG-L6d" firstAttribute="trailing" secondItem="X7B-C9-iIJ" secondAttribute="trailing" constant="20" id="Xrc-KQ-jLX"/>
                             <constraint firstItem="A4v-ad-uNZ" firstAttribute="centerX" secondItem="OV5-D2-zF1" secondAttribute="centerX" id="bSL-K7-4iJ"/>
                             <constraint firstItem="X7B-C9-iIJ" firstAttribute="top" secondItem="XLI-Mt-rd9" secondAttribute="bottom" id="kSb-en-gpE"/>
-                            <constraint firstItem="kmu-X6-xqu" firstAttribute="top" secondItem="dN4-uG-L6d" secondAttribute="top" constant="8" id="ne5-b5-7Xt"/>
                             <constraint firstItem="kmu-X6-xqu" firstAttribute="centerX" secondItem="OV5-D2-zF1" secondAttribute="centerX" id="oId-ez-R4D"/>
+                            <constraint firstItem="kmu-X6-xqu" firstAttribute="top" secondItem="r20-1U-TuS" secondAttribute="bottom" id="sT9-3V-aOb"/>
                             <constraint firstItem="X7B-C9-iIJ" firstAttribute="centerX" secondItem="OV5-D2-zF1" secondAttribute="centerX" id="tuZ-4T-JGX"/>
                             <constraint firstItem="XLI-Mt-rd9" firstAttribute="leading" secondItem="dN4-uG-L6d" secondAttribute="leading" constant="20" id="u4j-Q5-TQV"/>
                             <constraint firstItem="dN4-uG-L6d" firstAttribute="trailing" secondItem="2iX-ad-rqb" secondAttribute="trailing" constant="20" id="uHw-ST-6Yg"/>
