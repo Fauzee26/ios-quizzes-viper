@@ -60,6 +60,18 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		59B736862500D04800330CD4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				59DFA1FF24FF9A640084D508 /* View */,
+				59DFA20024FF9A690084D508 /* Interactor */,
+				59DFA20124FF9A700084D508 /* Presenter */,
+				59DFA20224FF9A750084D508 /* Entity */,
+				59DFA20324FF9A7B0084D508 /* Router */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		59DFA1DB24FDEB8B0084D508 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +93,7 @@
 		59DFA1E624FDEB8B0084D508 /* learn-ios-viper */ = {
 			isa = PBXGroup;
 			children = (
-				59DFA1FF24FF9A640084D508 /* View */,
-				59DFA20024FF9A690084D508 /* Interactor */,
-				59DFA20124FF9A700084D508 /* Presenter */,
-				59DFA20224FF9A750084D508 /* Entity */,
-				59DFA20324FF9A7B0084D508 /* Router */,
+				59B736862500D04800330CD4 /* Modules */,
 				59B7368124FFA83200330CD4 /* Util */,
 				59DFA1E724FDEB8B0084D508 /* AppDelegate.swift */,
 				59DFA1E924FDEB8B0084D508 /* SceneDelegate.swift */,
