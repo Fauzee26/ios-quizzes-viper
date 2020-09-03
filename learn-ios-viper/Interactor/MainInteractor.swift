@@ -12,6 +12,7 @@ import Alamofire
 protocol MainInteractorProtocol {
     var presenter: MainPresenterProtocol? {get set}
     func loadData()
+    func resetStateInteractor()
     
     func nextQuiz()
     
@@ -50,9 +51,16 @@ class MainInteractor: MainInteractorProtocol {
     private var questionNumber = 0
     private var score = 0
     private var listQuiz = [Quiz]()
+    private var isFinished = false
     
     func setListQuiz(quizzes: [Quiz]) {
         listQuiz = quizzes
+    }
+    
+    func resetStateInteractor() {
+        questionNumber = 0
+        score = 0
+        isFinished = false
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
@@ -91,11 +99,16 @@ class MainInteractor: MainInteractorProtocol {
             questionNumber += 1
         } else {
             print("end of the quiz: ", questionNumber)
+            isFinished = true
         }
+    }
+    
+    private func isQuizFinished() -> Bool {
+        return isFinished
     }
     
     func nextQuiz() {
         nextQuestion()
-        self.presenter?.nextQuizState(nextQuiz: getNextQuiz(), currentProgress: getProgress(), currentScore: getScore(), bgColor: getBgColor(level: getNextQuiz().difficulty))
+        self.presenter?.nextQuizState(nextQuiz: getNextQuiz(), currentProgress: getProgress(), currentScore: getScore(), bgColor: getBgColor(level: getNextQuiz().difficulty), isFinished: isQuizFinished())
     }
 }

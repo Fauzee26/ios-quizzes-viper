@@ -15,6 +15,8 @@ protocol MainViewProtocol:class {
     var router: MainRouterProtocol? {get set}
     
     func getData()
+    func resetState()
+    
     func nextQuizPressed()
     func setQuizzes(list: [Quiz])
     func checkAnswer(userAnswer: String) -> Bool
@@ -88,7 +90,7 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: MainPresenterViewProtocol {
-    func onNextQuestionPressed(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor) {
+    func onNextQuestionPressed(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor, isFinished: Bool) {
         lblQuestion.text = nextQuiz.question.htmlDecoded()
         lblCategory.text = nextQuiz.category
         
@@ -99,8 +101,11 @@ extension MainVC: MainPresenterViewProtocol {
         progress.progress = currentProgress
         
         print("progress: ", currentProgress)
-        print("answer: ", nextQuiz.correct_answer)
-        print("score: ", currentScore)
+        
+        if isFinished {
+            print("all finished already")
+            alertFinished()
+        }
     }
     
     func onQuizResponseSuccess(quizList: [Quiz]) {
@@ -112,5 +117,18 @@ extension MainVC: MainPresenterViewProtocol {
     func onQuizResponseFailed(error: String) {
         alert.dismiss(animated: true, completion: nil)
         print(error)
+    }
+    
+    func alertFinished() {
+        let alertController = UIAlertController(title: "Yeayyy", message: "You finished with score \(lblScore.text ?? "0"), dare to try again?", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Sure", style: .default) { (action:UIAlertAction) in
+            self.presenter?.resetState()
+            self.loadingProgress()
+            self.presenter?.getData()
+        }
+
+        alertController.addAction(action1)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

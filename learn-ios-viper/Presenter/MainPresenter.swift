@@ -13,14 +13,14 @@ protocol MainPresenterProtocol:class {
     func quizSuccess(quizList: [Quiz])
     func quizFailed(error: String)
     
-    func nextQuizState(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor)
+    func nextQuizState(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor, isFinished: Bool)
 }
 
 protocol MainPresenterViewProtocol:class {
     func onQuizResponseSuccess(quizList: [Quiz])
     func onQuizResponseFailed(error: String)
     
-    func onNextQuestionPressed(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor)
+    func onNextQuestionPressed(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor, isFinished: Bool)
 }
 
 class MainPresenter: MainViewProtocol {
@@ -32,6 +32,10 @@ class MainPresenter: MainViewProtocol {
     
     func getData() {
         interactor?.loadData()
+    }
+    
+    func resetState() {
+        interactor?.resetStateInteractor()
     }
     
     func setQuizzes(list: [Quiz]) {
@@ -48,8 +52,8 @@ class MainPresenter: MainViewProtocol {
 }
 
 extension MainPresenter: MainPresenterProtocol {
-    func nextQuizState(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor) {
-        presenterView?.onNextQuestionPressed(nextQuiz: nextQuiz, currentProgress: currentProgress, currentScore: currentScore, bgColor: bgColor)
+    func nextQuizState(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor, isFinished: Bool) {
+        presenterView?.onNextQuestionPressed(nextQuiz: nextQuiz, currentProgress: currentProgress, currentScore: currentScore, bgColor: bgColor, isFinished: isFinished)
     }
     
     func quizSuccess(quizList: [Quiz]) {
