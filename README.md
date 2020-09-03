@@ -30,6 +30,8 @@ This is simply where data model created to then be reference for interactor and 
 #### Router
 This elements responsible for navigation all views, such as push, pull, present controller and other things. Its sometimes referred as Wireframe
 
+Like any other common design pattern in iOS, VIPER take protocol delegate implementation to the core as the one who control the whole process of communication between elements, so it's no surprise if you see lot of protocols in almost every class that you saw on the project.
+
 
 ## Data Sources
 For the quizzes data in this project, i use free public api from https://opentdb.com. This is public api where you can use and customize quizzes data base on what you need, and also you can contribute to add more quiz to the database. For more information, just click link above and you can start right away.
