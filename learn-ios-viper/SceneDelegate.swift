@@ -19,11 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = storyboard.instantiateInitialViewController() as! MainVC
-        MainRouter.setupProtocolView(mainVC: mainVC)
-        window?.rootViewController = mainVC
-        window?.makeKeyAndVisible()
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainVC = storyboard.instantiateViewController(withIdentifier: "sfauzan") as? MainVC
+//        MainRouter.setupProtocolView(mainVC: mainVC!)
+//        window?.rootViewController = mainVC
+//        window?.makeKeyAndVisible()
         
     }
     
