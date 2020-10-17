@@ -34,6 +34,7 @@ class MainVC: UIViewController {
     
     var presenter: MainViewProtocol?
     let alert = UIAlertController(title: nil, message: "Generating Quizzes...", preferredStyle: .alert)
+    var isFirst = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +88,15 @@ class MainVC: UIViewController {
         alert.view.addSubview(loadingIndicator)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("isFirst")
+        print(isFirst)
+        guard !isFirst else { return }
+        self.presenter?.resetState()
+        self.loadingProgress()
+        self.presenter?.getData()
+    }
 }
 
 extension MainVC: MainPresenterViewProtocol {
@@ -120,15 +130,24 @@ extension MainVC: MainPresenterViewProtocol {
     }
     
     func alertFinished() {
-        let alertController = UIAlertController(title: "Yeayyy", message: "You finished with score \(lblScore.text ?? "0"), dare to try again?", preferredStyle: .alert)
-        
-        let action1 = UIAlertAction(title: "Sure", style: .default) { (action:UIAlertAction) in
-            self.presenter?.resetState()
-            self.loadingProgress()
-            self.presenter?.getData()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let finishedScr = storyboard.instantiateViewController(withIdentifier: "finished_sb") as? FinishedController
+        guard let nextScreen = finishedScr else {
+            return
         }
-
-        alertController.addAction(action1)
-        self.present(alertController, animated: true, completion: nil)
+        nextScreen.score = lblScore.text ?? "0"
+        self.present(nextScreen, animated: true, completion: {
+            self.isFirst = false
+        })
+//        let alertController = UIAlertController(title: "Yeayyy", message: "You finished with score \(lblScore.text ?? "0"), dare to try again?", preferredStyle: .alert)
+//
+//        let action1 = UIAlertAction(title: "Sure", style: .default) { (action:UIAlertAction) in
+//            self.presenter?.resetState()
+//            self.loadingProgress()
+//            self.presenter?.getData()
+//        }
+//
+//        alertController.addAction(action1)
+//        self.present(alertController, animated: true, completion: nil)
     }
 }
