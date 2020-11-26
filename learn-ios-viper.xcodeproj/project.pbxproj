@@ -19,6 +19,8 @@
 		59DFA1F424FDEB8E0084D508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DFA1F224FDEB8E0084D508 /* LaunchScreen.storyboard */; };
 		59DFA1FE24FF8B950084D508 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA1FD24FF8B950084D508 /* MainVC.swift */; };
 		C7951E6FBF147BEB9DA279EB /* Pods_learn_ios_viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220755155C5D2F97A5782EF6 /* Pods_learn_ios_viper.framework */; };
+		ED917E2F253B4E2E007C3B91 /* FinishedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED917E2E253B4E2E007C3B91 /* FinishedController.swift */; };
+		ED917E32253B52FB007C3B91 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED917E31253B52FB007C3B91 /* StartController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		59DFA1F524FDEB8E0084D508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DFA1FD24FF8B950084D508 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B43DD1A116629088847BB887 /* Pods-learn-ios-viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn-ios-viper.release.xcconfig"; path = "Target Support Files/Pods-learn-ios-viper/Pods-learn-ios-viper.release.xcconfig"; sourceTree = "<group>"; };
+		ED917E2E253B4E2E007C3B91 /* FinishedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedController.swift; sourceTree = "<group>"; };
+		ED917E31253B52FB007C3B91 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		59DFA1E624FDEB8B0084D508 /* learn-ios-viper */ = {
 			isa = PBXGroup;
 			children = (
+				ED917E2D253B4DF5007C3B91 /* FinishedModule */,
 				59B736862500D04800330CD4 /* Modules */,
 				59B7368124FFA83200330CD4 /* Util */,
 				59DFA1E724FDEB8B0084D508 /* AppDelegate.swift */,
@@ -160,6 +165,15 @@
 				220755155C5D2F97A5782EF6 /* Pods_learn_ios_viper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED917E2D253B4DF5007C3B91 /* FinishedModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED917E2E253B4E2E007C3B91 /* FinishedController.swift */,
+				ED917E31253B52FB007C3B91 /* StartController.swift */,
+			);
+			path = FinishedModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +293,10 @@
 			files = (
 				59B7367C24FFA1DB00330CD4 /* MainPresenter.swift in Sources */,
 				59B7368024FFA20300330CD4 /* MainRouter.swift in Sources */,
+				ED917E32253B52FB007C3B91 /* StartController.swift in Sources */,
 				59DFA1E824FDEB8B0084D508 /* AppDelegate.swift in Sources */,
 				59DFA1FE24FF8B950084D508 /* MainVC.swift in Sources */,
+				ED917E2F253B4E2E007C3B91 /* FinishedController.swift in Sources */,
 				59B7368324FFA85400330CD4 /* HTMLdecode.swift in Sources */,
 				59DFA1EA24FDEB8B0084D508 /* SceneDelegate.swift in Sources */,
 				59B7367E24FFA1F200330CD4 /* QuizModel.swift in Sources */,
