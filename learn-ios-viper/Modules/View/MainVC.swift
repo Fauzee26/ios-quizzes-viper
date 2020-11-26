@@ -54,6 +54,10 @@ class MainVC: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
     @IBAction func btnAnswerClicked(_ sender: UIButton) {
         let userAnswer = sender.currentTitle!
 
