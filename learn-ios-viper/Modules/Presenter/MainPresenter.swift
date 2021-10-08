@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-protocol MainPresenterProtocol:class {
+protocol MainPresenterProtocol: AnyObject {
     func quizSuccess(quizList: [Quiz])
     func quizFailed(error: String)
     
     func nextQuizState(nextQuiz: Quiz, currentProgress: Float, currentScore: Int, bgColor: UIColor, isFinished: Bool)
 }
 
-protocol MainPresenterViewProtocol:class {
+protocol MainPresenterViewProtocol: AnyObject {
     func onQuizResponseSuccess(quizList: [Quiz])
     func onQuizResponseFailed(error: String)
     
