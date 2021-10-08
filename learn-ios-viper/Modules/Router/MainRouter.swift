@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MainRouterProtocol:class {
+protocol MainRouterProtocol: AnyObject {
     static func setupProtocolView(mainVC: MainVC)
 }
 

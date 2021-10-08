@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-protocol MainViewProtocol:class {
+protocol MainViewProtocol: AnyObject {
     var presenterView: MainPresenterViewProtocol? {get set}
     var interactor: MainInteractorProtocol? {get set}
     var router: MainRouterProtocol? {get set}
