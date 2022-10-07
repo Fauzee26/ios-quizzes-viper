@@ -12,15 +12,13 @@ class StartController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
     }
+    
     @IBAction func startBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainVC") as? MainVC
-        MainRouter.setupProtocolView(mainVC: mainVC!)
-        self.present(mainVC!, animated: true, completion: nil)
+        guard let mainVC = storyboard.instantiateViewController(withIdentifier: "MainVC") as? MainVC else { return }
+        MainRouter.setupProtocolView(mainVC: mainVC)
+        self.navigationController?.setViewControllers([mainVC], animated: true)
     }
     
 
