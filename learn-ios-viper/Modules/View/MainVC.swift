@@ -108,15 +108,7 @@ extension MainVC: MainPresenterViewProtocol {
         
         if isFinished {
             print("all finished already")
-            if currentScore <= 20 {
-                alertFinished(title: "LOL", msg: "You suck. Just scored \(currentScore) HUH?")
-            } else if currentScore <= 50 {
-                alertFinished(title: "Nope", msg: "You're not qualified. You scored \(currentScore)")
-            } else if currentScore <= 70 {
-                alertFinished(title: "Yeayy", msg: "Amazing, You can do more. You scored \(currentScore)")
-            } else {
-                alertFinished(title: "Yeayy", msg: "You're Genius, Keep it up. You scored \(currentScore)")
-            }
+            self.goToFinishScreen(with: currentScore)
         }
     }
     
@@ -131,20 +123,10 @@ extension MainVC: MainPresenterViewProtocol {
         print(error)
     }
     
-    func alertFinished(title: String, msg: String) {
-        // "Yeayyy"
-        // "You finished with score \(lblScore.text ?? "0"), dare to try again?"
-        let alertController = UIAlertController(title: title
-                                                , message: msg,
-                                                preferredStyle: .alert)
-        
-        let action1 = UIAlertAction(title: "Sure", style: .default) { (action:UIAlertAction) in
-            self.presenter?.resetState()
-            self.loadingProgress()
-            self.presenter?.getData()
-        }
-
-        alertController.addAction(action1)
-        self.present(alertController, animated: true, completion: nil)
+    private func goToFinishScreen(with score: Int) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let finishVC = storyboard.instantiateViewController(withIdentifier: "FinishedController") as! FinishedController
+        finishVC.score = score
+        self.navigationController?.setViewControllers([finishVC], animated: true)
     }
 }
